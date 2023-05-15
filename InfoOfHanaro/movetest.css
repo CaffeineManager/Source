@@ -1,0 +1,43 @@
+body{
+    margin-left: 0;
+    margin-top: 0;
+    margin-right:0 ;
+}
+
+@keyframes animatedBackground {
+    from { background-position: 0px 0; }
+    to { background-position: -562px 0; }
+  }
+  #header-top {
+    height: 190px;
+    width:100%;
+    background-image: url('https://archive.org/download/clouds-tiled/clouds-tiled.png');
+    background-repeat: repeat-x;
+    animation: animatedBackground 8s linear infinite;
+    line-height: 400px;
+  
+  }
+
+
+  .move_text_box {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .scroll_move1 .text {
+    position: absolute;
+    animation: moveText 10s linear infinite;
+  }
+  
+  @keyframes moveText {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .text p {
+    margin: 0;
+  }
