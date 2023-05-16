@@ -1,0 +1,28 @@
+.container{
+    display: flex;
+    flex-direction: column;
+
+    border: 1px solid;
+    height: 50vh;
+    width:50%
+}
+
+.asd{
+    border: 1px solid;
+    width:70%;
+    height:30%;
+    background-image: url(./image/fintech.jpg);
+    background-size: cover;
+}
+
+.aa{
+    border: 1px solid;
+    width:30%;
+    height:30%
+}
+
+.ddd{
+    border: 1px solid;
+    width:30%;
+    height:30%
+}
