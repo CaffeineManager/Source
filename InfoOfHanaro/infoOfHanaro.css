@@ -9,6 +9,7 @@
 
 
 body{
+    background: black;
     margin-top:0px;
     margin-left:0px;
     margin-right:0px;
@@ -39,10 +40,9 @@ body{
     font-weight : bold;
 }
 
-
-
+/* 
+여기!! */
 .sub_visual_box{
-    /* background-color: black;; */
     margin:0 auto;
     position: absolute;
     border: 1px solid black;
@@ -108,6 +108,7 @@ body{
 }
 
 #sub_content_box_top_text h1{
+    color:white;
     font-family :Pretendard, san-serif;
     font-size:5em;
     line-height: 10%;
@@ -216,6 +217,7 @@ body{
 .miidle_box_text{
     /* color: white;
     font-weight: bold; */
+    color:white;
     margin:auto;
     border: 1px dotted blue;
     height: 20%;
@@ -254,12 +256,13 @@ body{
 }
 
 #sub_content_box_bottom_frame_applytext h2{
+    color: white;
     text-align: center;
     font-size: 4em;
 }
 
 
-.gradient{
+#gradient{
     text-align: center;
     font-size: 1em;
     background: linear-gradient(to right top, #f78bc8, #46aff5);
@@ -267,54 +270,51 @@ body{
     -webkit-background-clip: text;
 }
 
-*{margin: 0; padding: 0;}
-button{background: 0 none; border: 0 none;}
-
-.buttons{
-    /* border: 1px solid white;
-    background-color: black;
-    border-radius: 2em;
-    width: 17vh;
+.apply_button{
+    top:-50px;
+    width: 150px;
     height: 50px;
-    text-align: center;
-    vertical-align: middle;
-    font-size: 17px;
-    text-decoration: none;
+    font-size:16px;
     color: white;
-    font-weight: bold;
-     */
-
-}
-
-/* .buttons{position: relative; text-align: center; margin-top: 100px;} */
-.buttons button{
-    overflow: hidden; 
-    position: relative; 
-    display: inline-block; 
-    vertical-align: top; 
-    width: 17vh; 
-    height: 50px; 
-    border-radius: 2em;
-    line-height: 100px; 
-    border: 1px solid white;; 
-    transition: all 0.5s;
-}
-.buttons button:hover{color: black;}
-.buttons button:before{
-    content: ""; 
-    z-index: -1; 
-    position: absolute; 
-    background: #225ea7; 
-    transition: all 1s;}
-.buttons .button2:before{
-    right: 0; top: 0; width: 0; height: 100%; 
-    border-bottom-left-radius: 50%; border-top-left-radius: 50%;}
-.buttons .button2:hover:before{width: 200%;}
-
-.button_text{
+    text-align: center;
     position: relative;
-    bottom: 25px;
+    text-decoration: none;
+    /* display:inline-block; */
+    display: flex; /* 텍스트를 수직으로 가운데 정렬하기 위해 Flexbox 사용 */
+    align-items: center; /* 수직 가운데 정렬을 위해 align-items 속성 사용 */
+    justify-content: center;
+    border:2px solid white;
+    border-radius: 2em;
 }
+
+.apply_button:hover{
+    font-weight: bold;
+    background: linear-gradient(to right top, #f78bc8, #46aff5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+.apply_button::before {
+    content: '';
+    position: absolute;
+    border-radius: 2em;
+    left: 0px;
+    bottom:0px;
+    z-index:-1;
+    width: 100%;
+    height:100%;
+    background: transparent;
+    box-shadow: inset 0px 0px 0px white;
+    display: block;
+    -webkit-transition: all 0.8s cubic-bezier(.5, .24, 0, 1);
+    transition: all 0.8s cubic-bezier(.5, .24, 0, 1)
+}
+  /* if you want it to show from the right use -300px instead */
+.apply_button:hover::before {
+box-shadow: inset 300px 0px 0px white;
+}
+
 
 
 
@@ -332,7 +332,9 @@ button{background: 0 none; border: 0 none;}
 }
 
 .bottom_content_benefit_box{
+    margin: auto;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
     position: relative;
@@ -342,17 +344,172 @@ button{background: 0 none; border: 0 none;}
     height: 80vh;
 }
 
-.bottom_content_benefit_visualbox{
+.bottom_content_benefit_box{
     border:1px solid black;
-    width: 40%;
+    width: 90%;
     height: 80%;
 }
 
-.bottom_content_benefit_textbox{
-    border:1px solid black;
-    width: 55%;;
-    height: 70%;
+
+.bottom_content_benefit_title_box{
+    position: relative;
+    bottom: 10%;
+    width: 100%;
+    height: 100px;
+    border: 1px solid blue;
 }
+
+.bottom_content_benefit_title_box h2{
+    color: white; 
+    text-align: center;
+    font-size: 4em;
+}
+
+/* 여기!!!*/
+
+.carousel {
+    width: 900px;
+    height: 600px;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    }
+    
+    .carousel-container {
+    display: flex;
+    width: 300%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+    }
+    
+    .carousel-item {
+    flex: 0 0 33.33%;
+    height: 100%;
+    }
+    
+    .carousel-controls {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    }
+    
+    .carousel-controls .arrow {
+    width: 30px;
+    height: 60px;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-size: 24px;
+    }
+    
+    .carousel-controls .arrow:hover {
+    color: #666;
+    }
+
+.bottom_content_benefit_carousel_frame{
+    /* border:1px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 80%;
+}
+
+.bottom_content_benefit_carousel_contents_box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* border: 1px solid blue; */
+    width: 80%;
+    height: 100%;
+}
+
+.benefit_carousel_title_box{
+    position: relative;
+    left:5%;
+    top:2%;
+    /* border: 1px solid red; */
+    width: 600px;
+    height: 15%;
+    
+}
+
+#benefit_keyword{
+    text-align: center;
+    display: inline-block;
+
+    border-radius: 2em;
+    width: 22%;
+    height: 30%;
+    background-color: #89DFA0;
+}
+
+.keyword{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+
+#benefit_title{
+    display: inline-block;
+    /* border: 1px solid black; */
+    width: 60%;
+    height: 20%;
+}
+
+#benefit_title h3{
+    color:white;
+    font-size: 30px;
+}
+
+.benefit_carousel_contents_box{
+    margin: auto;
+    border: 1px solid #89DFA0;;
+    border-radius: 1em;
+    width: 90%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.info_title{
+    color:white;
+    /* border: 1px solid black; */
+    margin-left: 3%;
+    width:90%;
+    font-size: 25px;
+    font-weight: bold;;
+}
+
+.info_text{
+    color:white;
+    /* border: 1px solid black; */
+    margin-left: 3%;
+    width:90%;
+    font-size: 20px;
+}
+
+.benefit_carousel_sub_contents_box{
+    color:white;
+    margin: auto;
+    /* border: 1px solid red; */
+    width: 90%;
+    height: 30%;
+}
+
+/* 여기!!!*/
 
 .bottom_content_ideal_talent_frame{
     border: 1px solid blue;
@@ -406,6 +563,7 @@ button{background: 0 none; border: 0 none;}
 }
 
 .bottom_content_ideal_support_frame{
+    background: white;
     position: relative;
     top:3%;
     display: flex;

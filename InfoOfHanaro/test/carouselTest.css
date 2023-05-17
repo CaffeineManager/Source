@@ -1,0 +1,140 @@
+.carousel {
+    width: 700px;
+    height: 600px;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    }
+    
+    .carousel-container {
+    display: flex;
+    width: 300%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+    }
+    
+    .carousel-item {
+    flex: 0 0 33.33%;
+    height: 100%;
+    }
+    
+    .carousel-controls {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    }
+    
+    .carousel-controls .arrow {
+    width: 30px;
+    height: 60px;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-size: 24px;
+    }
+    
+    .carousel-controls .arrow:hover {
+    color: #666;
+    }
+
+.bottom_content_benefit_carousel_frame{
+    /* border:1px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 80%;
+}
+
+.bottom_content_benefit_carousel_contents_box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* border: 1px solid blue; */
+    width: 70%;
+    height: 100%;
+}
+
+.benefit_carousel_title_box{
+    position: relative;
+    left:5%;
+    top:2%;
+    /* border: 1px solid red; */
+    width: 600px;
+    height: 15%;
+    
+}
+
+#benefit_keyword{
+    text-align: center;
+    display: inline-block;
+
+    border-radius: 2em;
+    width: 22%;
+    height: 30%;
+    background-color: #89DFA0;
+}
+
+.keyword{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+
+#benefit_title{
+    display: inline-block;
+    /* border: 1px solid black; */
+    width: 50%;
+    height: 20%;
+}
+
+#benefit_title h3{
+    font-size: 30px;
+}
+
+.benefit_carousel_contents_box{
+    margin: auto;
+    border: 1px solid #89DFA0;;
+    border-radius: 1em;
+    width: 90%;
+    height: 35%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.info_title{
+    /* border: 1px solid black; */
+    margin-left: 3%;
+    width:90%;
+    font-size: 25px;
+    font-weight: bold;;
+}
+
+.info_text{
+    /* border: 1px solid black; */
+    margin-left: 3%;
+    width:90%;
+    font-size: 20px;
+}
+
+.benefit_carousel_sub_contents_box{
+    position: relative;
+    bottom: 10%;
+    margin: auto;
+    /* border: 1px solid red; */
+    width: 90%;
+    height: 30%;
+}
+

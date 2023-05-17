@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            .carousel {
+            width: 700px;
+            height: 600px;
+            position: relative;
+            overflow: hidden;
+            margin: 0 auto;
+            }
+            
+            .carousel-container {
+            display: flex;
+            width: 300%;
+            height: 100%;
+            transition: transform 0.5s ease-in-out;
+            }
+            
+            .carousel-item {
+            flex: 0 0 33.33%;
+            height: 100%;
+            }
+            
+            .carousel-controls {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            }
+            
+            .carousel-controls .arrow {
+            width: 30px;
+            height: 60px;
+            color: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            border: none;
+            background: none;
+            font-size: 24px;
+            }
+            
+            .carousel-controls .arrow:hover {
+            color: #666;
+            }
+        </style>
+        </head>
+        <body>
+        <div class="carousel">
+            <div class="carousel-container">
+            <div class="carousel-item" >
+                <div class="bottom_content_benefit_carousel_frame">
+                    <div class="bottom_content_benefit_carousel_contents_box">
+                        <div class="benefit_carousel_title_box">
+                            <div id="benefit_keyword">
+                                <span class="keyword">
+                                    <h4>KEYWORD 1</h4>
+                                </span>
+                            </div>
+                            <div id="benefit_title">
+                                <h3>Digital Hana 路 특전</h3>
+                            </div>
+                        </div>
+                        <div class="benefit_carousel_contents_box">
+                            <div class="info_title"><br>특전이란?</div><br>
+                            <div class="info_text">
+                                본 과정 수료시 하나금융그룹 14개 관계사에 채용우대혜택 및 하나은행 디지털/ICT 현직자 프로그램을 제공합니다.<br>
+                            </div>
+                                
+                        </div>
+                        <div class="benefit_carousel_sub_contents_box">
+                            - [훈련생 限] 하나금융그룹 14개 관계사 서류 우대<br>
+                            - [우수 훈련생 限] 하나은행 서류 면제<br>
+                            - [최우수 훈련생 限] 하나은행 서류 면제, 코딩테스트 면제
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item" >
+                <div class="bottom_content_benefit_carousel_frame">
+                    <div class="bottom_content_benefit_carousel_contents_box">
+                        <div class="benefit_carousel_title_box">
+                            <div id="benefit_keyword">
+                                <span class="keyword">
+                                    <h4>KEYWORD 1</h4>
+                                </span>
+                            </div>
+                            <div id="benefit_title">
+                                <h3>Digital Hana 路 특전</h3>
+                            </div>
+                        </div>
+                        <div class="benefit_carousel_contents_box">
+                            <div class="info_title"><br>특전이란?</div><br>
+                            <div class="info_text">
+                                본 과정 수료시 하나금융그룹 14개 관계사에 채용우대혜택 및 하나은행 디지털/ICT 현직자 프로그램을 제공합니다.<br>
+                            </div>
+                                
+                        </div>
+                        <div class="benefit_carousel_sub_contents_box">
+                            - [훈련생 限] 하나금융그룹 14개 관계사 서류 우대<br>
+                            - [우수 훈련생 限] 하나은행 서류 면제<br>
+                            - [최우수 훈련생 限] 하나은행 서류 면제, 코딩테스트 면제
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item" >
+                <div class="bottom_content_benefit_carousel_frame">
+                    <div class="bottom_content_benefit_carousel_contents_box">
+                        <div class="benefit_carousel_title_box">
+                            <div id="benefit_keyword">
+                                <span class="keyword">
+                                    <h4>KEYWORD 1</h4>
+                                </span>
+                            </div>
+                            <div id="benefit_title">
+                                <h3>Digital Hana 路 특전</h3>
+                            </div>
+                        </div>
+                        <div class="benefit_carousel_contents_box">
+                            <div class="info_title"><br>특전이란?</div><br>
+                            <div class="info_text">
+                                본 과정 수료시 하나금융그룹 14개 관계사에 채용우대혜택 및 하나은행 디지털/ICT 현직자 프로그램을 제공합니다.<br>
+                            </div>
+                                
+                        </div>
+                        <div class="benefit_carousel_sub_contents_box">
+                            - [훈련생 限] 하나금융그룹 14개 관계사 서류 우대<br>
+                            - [우수 훈련생 限] 하나은행 서류 면제<br>
+                            - [최우수 훈련생 限] 하나은행 서류 면제, 코딩테스트 면제
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="carousel-controls">
+                <button class="arrow prev" id="asd" title="next">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27.9 50.2">
+                      <path d="M25.1 50.2L0 25.1 25.1 0l2.8 2.8L5.7 25.1l22.2 22.2z" />
+                    </svg>
+                </button>
+            <button class="arrow next">&#9002;</button>
+            </div>
+        </div>
+        
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+            const carousel = document.querySelector('.carousel');
+            const container = carousel.querySelector('.carousel-container');
+            const prevArrow = carousel.querySelector('.arrow.prev');
+            const nextArrow = carousel.querySelector('.arrow.next');
+            const itemWidth = carousel.querySelector('.carousel-item').offsetWidth;
+            const itemCount = carousel.querySelectorAll('.carousel-item').length;
+            let currentPosition = 0;
+        
+            prevArrow.addEventListener('click', function () {
+                currentPosition += itemWidth;
+                if (currentPosition > 0) {
+                currentPosition = 0;
+                }
+                container.style.transform = `translateX(${currentPosition}px)`;
+            });
+        
+            nextArrow.addEventListener('click', function () {
+                currentPosition -= itemWidth;
+                if (currentPosition < -(itemWidth * (itemCount - 1))) {
+                currentPosition = -(itemWidth * (itemCount - 1));
+                }
+                container.style.transform = `translateX(${currentPosition}px)`;
+            });
+            });
+        </script>
+        </body>
+</html>
+

@@ -7,8 +7,8 @@ function handleScroll() {
         const windowHeight = window.innerHeight;
 
 
-        console.log('elementTop:', elementTop);
-        console.log('windowHeight:', windowHeight);
+        // console.log('elementTop:', elementTop);
+        // console.log('windowHeight:', windowHeight);
         // 스크롤 위치에 따라 요소의 위치를 조정하여 fade-in 효과를 적용합니다.
         if(elementTop < windowHeight* 0.55){
         element.style.opacity = 1;
@@ -55,3 +55,31 @@ function handleScrollText() {
 window.addEventListener('scroll', handleScrollText);
 // 페이지 로딩 시 초기 상태를 체크합니다.
 handleScrollText();
+
+
+//캐러셀
+document.addEventListener('DOMContentLoaded', function () {
+    const carousel = document.querySelector('.carousel');
+    const container = carousel.querySelector('.carousel-container');
+    const prevArrow = carousel.querySelector('.arrow.prev');
+    const nextArrow = carousel.querySelector('.arrow.next');
+    const itemWidth = carousel.querySelector('.carousel-item').offsetWidth;
+    const itemCount = carousel.querySelectorAll('.carousel-item').length;
+    let currentPosition = 0;
+
+    prevArrow.addEventListener('click', function () {
+        currentPosition += itemWidth;
+        if (currentPosition > 0) {
+        currentPosition = 0;
+        }
+        container.style.transform = `translateX(${currentPosition}px)`;
+    });
+
+    nextArrow.addEventListener('click', function () {
+        currentPosition -= itemWidth;
+        if (currentPosition < -(itemWidth * (itemCount - 1))) {
+        currentPosition = -(itemWidth * (itemCount - 1));
+        }
+        container.style.transform = `translateX(${currentPosition}px)`;
+    });
+    });
